@@ -20,7 +20,7 @@ function Password() {
         const email = event.target.elements.email.value;
         console.log(email);
         try {
-            const response = await axios.get("http://localhost:5000/api/auth/passwordRecovery", {
+            const response = await axios.get("https://event-link-user-server.vercel.app/api/auth/passwordRecovery", {
                 params: { email: email }
             });
             if (response.data.message === "Recovery mail sent") {
