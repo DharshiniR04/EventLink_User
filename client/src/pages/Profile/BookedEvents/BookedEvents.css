@@ -1,0 +1,122 @@
+.bookedevents {
+    display: flex;
+    padding: 20px; 
+}
+
+.bookedevents-list {
+    flex-grow: 1; 
+}
+
+.bookedevents-pay {
+    margin-top: 20px; 
+}
+
+
+.bookedevents-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px; 
+    padding: 5px;
+}
+
+.bookedevent-ribbon {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 150px;
+    height: 150px;
+    overflow: hidden;
+    pointer-events: none;
+}
+
+.bookedevent-ribbon span {
+    position: absolute;
+    display: block;
+    width: 225px;
+    padding: 15px 0;
+    background-color: #9d3e3e;
+    color: white;
+    font-size: 12px;
+    font-weight: bold;
+    text-align: center;
+    text-transform: uppercase;
+    transform: rotate(45deg);
+    top: 30px;
+    right: -50px;
+    clip-path: polygon(0% 10%, 10% 0%, 30% 10%, 50% 0%, 70% 10%, 90% 0%, 100% 10%, 90% 100%, 70% 90%, 50% 100%, 30% 90%, 10% 100%, 0% 90%);
+}
+
+.bookedevent-ribbon .paid{
+    background-color: #48985f;
+
+}
+
+.bookedevent-card {
+    position: relative;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 15px;
+    width: 300px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    margin: 20px; 
+}
+
+
+.bookedevent-image {
+    max-width: 300px; 
+    height: 250px;
+    border-radius: 8px; 
+}
+
+.bookedevent-name {
+    color: #2c3e50; 
+    margin: 10px 0; 
+    font-size: 1.5rem; 
+}
+
+.bookedevent-name,
+.bookedevent-college,
+.bookedevent-paymentstatus,
+.bookedevent-email,
+.bookedevent-events,
+.bookedevent-details,
+.bookedevent-teammembers {
+    margin: 5px 0; 
+    color: #34495e; 
+}
+
+.bookedevent-container-btn {
+    display: flex;
+    justify-content: space-between;
+    margin: 15px;
+}
+
+
+.bookedevent-btn-delete {
+    background-color: #578359; 
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 14px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    background-color: #6e302b; 
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.bookedevent-btn-delete:hover {
+    background-color: #d32f2f; 
+}
+
+.bookedevent-btn-delete:active {
+    transform: scale(0.98); 
+}
+
+.no-events-message {
+    text-align: center; 
+    font-size: 1.2rem; 
+    color: #e74c3c;
+}
+

@@ -1,0 +1,66 @@
+.qrcode {
+  display: flex;
+  padding: 20px;
+}
+
+.qrcode-list {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.qrcode-container {
+  display: flex;
+  flex-direction: row;
+  padding: 10px;
+  gap: 25px;
+}
+
+.qr-card {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 15px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1); 
+  text-align: center;
+  width: 200px;
+  transition: transform 0.2s; 
+}
+
+.qr-card:hover {
+  transform: scale(1.05); 
+}
+
+.qr-card img {
+  width: 100%;
+  height: auto;
+  margin-bottom: 10px;
+  border-radius: 4px;
+}
+
+.qr-card p {
+  font-size: 16px;
+  color: #333;
+  margin: 0;
+  font-weight: bold; 
+}
+
+.qr-btn-download {
+  background-color: #4CAF50; 
+  color: white; 
+  border: none; 
+  border-radius: 4px; 
+  padding: 10px 15px; 
+  cursor: pointer; 
+  margin-top: 10px;
+  transition: background-color 0.3s; 
+}
+
+.qr-btn-download:hover {
+  background-color: #45a049; 
+}
+
+.qr-btn-download:focus {
+  outline: none; 
+}

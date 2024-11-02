@@ -1,0 +1,170 @@
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+.signup {
+    display: flex;
+    width: 100%;
+}
+
+.signup-img {
+    position: relative; 
+    width: 50%;
+    height: 100%;
+}
+
+.signup-img img {
+    width: 100%;
+    height: 100vh;
+}
+
+.overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4); 
+    z-index: 1;
+}
+
+.signup-text {
+    font-family: "Work Sans", sans-serif;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    text-align: center;
+    z-index: 2; 
+}
+
+.signup-text h1 {
+    margin-bottom: 8%;
+    font-size: 250%;
+}
+
+.signup-text p {
+    margin-bottom: 25px;
+    font-size: 100%;
+    letter-spacing:1.5px;
+}
+
+.signup-text button {
+    padding: 3% 8%;
+    background-color:transparent;
+    border: 1px solid white;
+    color: #fff;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 10%;
+}
+
+.signup-content {
+    width: 50%;
+    margin: 8%;
+}
+
+.signup-content-head{
+    margin-left: 35%;
+    margin-bottom: 7%;
+    font-weight: lighter;
+}
+
+
+.input-container {
+    border-bottom: 1px solid #908888;
+    width: 70%;
+    padding: 10px;
+    margin-left: 12%;
+    margin-bottom: 5%;
+}
+
+.solid-input {
+    width: 100%;
+    border: none;
+    outline: none;
+    font-size: 20px;
+    background-color: transparent;
+    padding:1%;
+}
+
+.forgotpass{
+    margin-left: 42%;
+    font-size: 20px;
+    margin-bottom: 8%;
+    font-weight: lighter;
+}
+
+.signup-text button:hover{
+    color: black;
+    background-color: white;
+}
+
+.signup-btn{
+    padding: 2% 4%;
+    background-color:#c9b47a;
+    border: none;
+    color: black;
+    cursor: pointer;
+    font-size: 14px;
+    border-radius: 10%;
+    margin-left: 45%;
+}
+
+.signup-btn:hover{
+    background-color:#aa9353;
+}
+
+.signup-password-toggle{
+    position: absolute;
+    right: 230px;
+    top: 59%;
+    cursor: pointer; 
+}
+
+.back-arrow{
+    cursor: pointer;
+}
+
+#errorTag{
+    margin:0 0 5% 40%;
+    color: red;
+    font-weight: 500;
+}
+
+@media (max-width:480px) {
+
+    .signup-text h1 {
+        font-size: 170%;
+        margin-top: -40%;
+    }
+    
+    .signup-text p {
+        font-size: 80%;
+    }
+    
+
+    .signup-text button {
+        padding:10%;
+        font-size: 12px;
+    }
+
+    .signup-content-head{
+        margin: 80% 0 30% 8%;
+    }
+    
+    .forgotpass{
+        margin:10% 0 18% 32%;
+        font-size: 12px;
+        font-weight: lighter;
+    }
+    
+
+    .signup-btn{
+        margin:18% 0 0 39%;
+    }
+
+    .signup-password-toggle {
+        right: 20px;
+        top: 60%;
+    }
+    
+    
+}

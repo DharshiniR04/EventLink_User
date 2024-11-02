@@ -1,0 +1,67 @@
+ .home-navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.5% 5%;
+    border-bottom: 1px solid rgba(117, 101, 101, 0.422);
+}
+
+.home-navbar .logo {
+    width: 30px;
+    height: 30px;
+}
+
+.title {
+    font-weight: 600;
+    margin-left: 2%;
+    flex-grow: 1;
+    text-align: center;
+    font-family: "Playwrite DE Grund", cursive;
+   color:  rgb(46, 76, 114);
+}
+
+.home-profile-wrapper {
+    position: relative;
+}
+
+.home-image-upload-label {
+    cursor: pointer;
+    display: inline-block;
+    margin-left: 2%;
+}
+
+.home-profile-image-upload {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-size: cover;
+    background-position: center;
+    border: 1px solid black;
+    margin: 0 auto;
+}
+
+.home-dropdown {
+    position: absolute;
+    top: 60px;
+    right: 0;
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    z-index: 10;
+}
+
+.home-dropdown-item {
+    padding: 10px 20px;
+    cursor: pointer;
+    border-bottom: 1px solid #ddd;
+    text-align: center;
+}
+
+.home-dropdown-item:last-child {
+    border-bottom: none;
+}
+
+.home-dropdown-item:hover {
+    background-color: #f0f0f0;
+}
