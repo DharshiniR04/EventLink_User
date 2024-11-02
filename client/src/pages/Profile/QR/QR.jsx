@@ -12,7 +12,7 @@ function QRPage() {
     useEffect(() => {
         const fetchQR = async () => {
             try {
-                const response = await axios.get(`http://localhost:5000/api/payment/fetchqr?email=${user.email}`);
+                const response = await axios.get(`https://event-link-user-server.vercel.app/api/payment/fetchqr?email=${user.email}`);
                 const events = response.data.events;
 
                 const qrCodeUrls = {};
