@@ -12,7 +12,7 @@ function Payment() {
     useEffect(() => {
         const fetchPaymentDetail = async () => {
             try {
-                const response = await axios.get(`http://localhost:5000/api/payment/getpaymentdetail?email=${user.email}`);
+                const response = await axios.get(`https://event-link-user-server.vercel.app/api/payment/getpaymentdetail?email=${user.email}`);
                 setPaymentDetail(response.data.departmentPayments);
             } catch (err) {
                 console.log(err);
@@ -23,7 +23,7 @@ function Payment() {
 
     const handlePaymentSuccess=async(paymentData,department)=>{
         try{
-            const response=await axios.post("http://localhost:5000/api/payment/storepayment",{data:paymentData,email:user.email,department:department,timestamp:Date.now()});
+            const response=await axios.post("https://event-link-user-server.vercel.app/api/payment/storepayment",{data:paymentData,email:user.email,department:department,timestamp:Date.now()});
             return response.data.message;
         }
         catch(err){
