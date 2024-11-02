@@ -50,7 +50,7 @@ function ProfileInfo() {
         console.log(data);
 
         try {
-            const response = await axios.patch("http://localhost:5000/api/user/userdetail", {
+            const response = await axios.patch("https://event-link-user-server.vercel.app/api/user/userdetail", {
                 email: email,
                 profile: image,
                 department: data.department,
