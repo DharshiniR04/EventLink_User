@@ -53,7 +53,7 @@ function Details() {
         };
 
         try {
-            const response = await axios.post("http://localhost:5000/api/book/bookevent", { data });
+            const response = await axios.post("https://event-link-user-server.vercel.app/api/book/bookevent", { data });
             console.log(response);
             if (response.data.message === "Users does not exist") {
                 alert(`Users with emails ${response.data.emails} do not exist`);
