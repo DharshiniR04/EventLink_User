@@ -19,7 +19,7 @@ function Events() {
 
     useEffect(() => {
         const fetchEvent = async () => {
-            const response = await axios.get(`http://localhost:5000/api/event/getevents?event=${eventSelect}`);
+            const response = await axios.get(`https://event-link-user-server.vercel.app/api/event/getevents?event=${eventSelect}`);
             console.log(response.data);
             setEvents(response.data.event);
         }
