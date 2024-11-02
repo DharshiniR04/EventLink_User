@@ -30,7 +30,7 @@ function Signup() {
             password: e.target.elements.password.value
         };
         try {
-            const response = await axios.post("http://localhost:5000/api/auth/signup", {
+            const response = await axios.post("https://event-link-user-server.vercel.app/api/auth/signup", {
                 name: data.name,
                 email: data.email,
                 password: data.password
@@ -53,7 +53,7 @@ function Signup() {
         e.preventDefault();
         try {
   
-            const response = await axios.post("http://localhost:5000/api/auth/verify-otp", {
+            const response = await axios.post("https://event-link-user-server.vercel.app/api/auth/verify-otp", {
                 email: email,
                 otp: otp
             });
