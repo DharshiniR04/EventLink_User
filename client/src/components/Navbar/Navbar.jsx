@@ -34,7 +34,7 @@ function Navbar() {
             if (token && setUser) {
                 try {
                     const userdetail = await axios.post(
-                        "http://localhost:5000/api/user/fetchuser",
+                        "https://event-link-user-server.vercel.app/api/user/fetchuser",
                         { email: token }
                     );
                     setUser(userdetail.data);
