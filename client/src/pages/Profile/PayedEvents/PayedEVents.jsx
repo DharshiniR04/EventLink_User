@@ -10,7 +10,7 @@ function PayedEvents() {
     useEffect(() => {
         const fetchBookedEvents = async () => {
             try {
-                const response = await axios.get(`http://localhost:5000/api/payment/getpayedevent?email=${user.email}`);
+                const response = await axios.get(`https://event-link-user-server.vercel.app/api/payment/getpayedevent?email=${user.email}`);
                 const departmentEvents = response.data.events.map((data) => {
                     return data.events;
                   }).flat();
