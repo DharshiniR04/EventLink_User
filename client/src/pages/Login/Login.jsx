@@ -26,7 +26,7 @@ function Login() {
 
     const fetchUserDetail=async(email)=>{
         try{
-           const userdetail=await axios.post("http://localhost:5000/api/user/fetchuser",{email:email});
+           const userdetail=await axios.post("https://event-link-user-server.vercel.app/api/user/fetchuser",{email:email});
            return userdetail;
         }
         catch(err){
@@ -42,7 +42,7 @@ function Login() {
             password: e.target.elements.password.value
         };
         try {
-            const response = await axios.post("http://localhost:5000/api/auth/login", { email: data.email, password: data.password });
+            const response = await axios.post("https://event-link-user-server.vercel.app/api/auth/login", { email: data.email, password: data.password });
             if (response.data.message === "User does not exist") {
                 errorTag.textContent = "User does not exist";
             }
