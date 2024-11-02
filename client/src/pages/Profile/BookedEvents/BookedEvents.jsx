@@ -4,14 +4,14 @@ import axios from 'axios';
 import { SelectedUser } from '../../../context/UserContext';
 
 function BookedEvents() {
-    const [bookedEvents, setBookedEvents] = useState([]); // Unpaid events
-    const [payedEvents, setPayedEvents] = useState([]); // Paid events
+    const [bookedEvents, setBookedEvents] = useState([]);
+    const [payedEvents, setPayedEvents] = useState([]);
     const { user } = SelectedUser();
 
     useEffect(() => {
         const fetchBookedEvents = async () => {
             try {
-                const response = await axios.get(`http://localhost:5000/api/book/getbookedevent?email=${user.email}`);
+                const response = await axios.get(`https://event-link-user-server.vercel.app/api/book/getbookedevent?email=${user.email}`);
 
                 const departmentEvents = response.data.notPayedevents.map((data) => {
                     return data.events;
@@ -20,8 +20,8 @@ function BookedEvents() {
                 const departmentPaidEvents = response.data.payedEvents.map((data) => {
                     return data.events;
                 }).flat();
-                setBookedEvents(departmentEvents || []); // Set unpaid events
-                setPayedEvents(departmentPaidEvents || []); // Set paid events
+                setBookedEvents(departmentEvents || []); 
+                setPayedEvents(departmentPaidEvents || []); 
             } catch (err) {
                 console.log(err);
             }
@@ -31,14 +31,14 @@ function BookedEvents() {
 
     const handleDelete = async (data) => {
         try {
-            const response = await axios.delete("http://localhost:5000/api/book/deletebookedevent", {
+            const response = await axios.delete("https://event-link-user-server.vercel.app/api/book/deletebookedevent", {
                 params: {
                     email: user.email,
                     eventname: data.eventname,
                     registereddepartment: data.eventdepartment
                 }
             });
-            console.log(response.data.message);
+           
             if (response.data.message === "Event deleted successfully") {
                 alert("Event Deleted Successfully");
                 setBookedEvents(bookedEvents.filter(event => event.eventname !== data.eventname));
