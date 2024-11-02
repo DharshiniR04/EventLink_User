@@ -36,7 +36,7 @@ function Home() {
 
     useEffect(() => {
         const fetchEvent = async () => {
-            const response = await axios.get(`http://localhost:5000/api/event/getallevents`);
+            const response = await axios.get(`https://event-link-user-server.vercel.app/api/event/getallevents`);
             setEvents(response.data.event);
         }
         fetchEvent();
